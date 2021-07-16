@@ -1,0 +1,31 @@
+{
+  "name": "red-contrib-ha-bemfa",
+  "version": "1.0.0",
+  "description": "HomeAssistant连接巴法云",
+  "main": "index.js",
+  "keywords": [
+    "node-red"
+  ],
+  "node-red": {
+    "nodes": {
+      "ha-bemfa": "ha-bemfa.js"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shaonianzhentan/node-red-contrib-ha-bemfa.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shaonianzhentan/node-red-contrib-ha-bemfa/issues"
+  },
+  "homepage": "https://github.com/shaonianzhentan/node-red-contrib-ha-bemfa#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "qs": "^6.10.1"
+  }
+}

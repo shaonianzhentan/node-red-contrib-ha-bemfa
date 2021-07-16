@@ -1,0 +1,27 @@
+<script type="text/html" data-template-name="ha-bemfa">
+    <div class="form-row">
+        <label for="node-input-server"> MQTT</label>
+        <select id="node-input-server"></select>
+    </div>
+    <div class="form-row">
+        <label for="node-input-hass"> HASS</label>
+        <select id="node-input-hass"></select>
+    </div>
+</script>
+<script type="text/javascript">
+    RED.nodes.registerType('ha-bemfa', {
+        category: '家庭助理',
+        color: '#C0DEED',
+        icon: "font-awesome/fa-cloud",
+        paletteLabel: '巴法云',
+        defaults: {
+            server: { value: "", type: "mqtt-broker", required: true },
+            hass: { value: "", type: "ha-mqtt-homeassistant_config", required: true }
+        },
+        inputs: 0,
+        outputs: 1,
+        label: function () {
+            return "巴法云";
+        }
+    });
+</script>
