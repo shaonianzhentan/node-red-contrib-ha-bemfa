@@ -12,12 +12,13 @@ module.exports = function (RED) {
 
             node.on('input', function (msg) {
                 const { payload } = msg
-                this.getBemfaDevice(true)
+                ha.getBemfaDevice(true)
             })
 
             ha.getBemfaDevice().then((entitys) => {
                 entitys.forEach(({ topic_id, domain, entity_id }) => {
-                    this.server.subscribe(topic_id, { qos: 0 }, (mtopic, mpayload, mpacket) => {
+                    console.log('訂閲', topic_id)
+                    node.server.subscribe(topic_id, { qos: 0 }, (mtopic, mpayload, mpacket) => {
                         const payload = mpayload.toString()
                         const arr = payload.split('#')
                         const data = { entity_id }
