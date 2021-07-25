@@ -13,7 +13,9 @@ module.exports = function (RED) {
             const listening = (entitys) => {
                 // 监听服务
                 node.server.client.on('message', (mtopic, mpayload, mpacket) => {
-                    const { domain, entity_id } = entitys.find(ele => ele.topic_id == mtopic)
+                    const entity = entitys.find(ele => ele.topic_id == mtopic)
+                    if (!entity) return;
+                    const { domain, entity_id } = entity
                     const payload = mpayload.toString()
                     console.log(mtopic, payload)
                     const arr = payload.split('#')
