@@ -1,6 +1,6 @@
 {
-  "name": "red-contrib-ha-bemfa",
-  "version": "1.0.0",
+  "name": "node-red-contrib-ha-bemfa",
+  "version": "1.0.1",
   "description": "HomeAssistant连接巴法云",
   "main": "index.js",
   "keywords": [
